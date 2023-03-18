@@ -1,6 +1,8 @@
 const fs = require('fs');
+const path = require('path');
 
-console.log(__filename);
+const distPath = path.resolve(__dirname, '..', 'dist', 'test.txt');
+// console.log(distPath);
 
-fs.writeFileSync(__dirname + '/test.txt', 'hello, node,js');
+fs.writeFileSync(distPath, 'hello, node,js');
 //console.log('hello, node.js');
